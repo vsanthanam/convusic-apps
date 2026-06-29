@@ -62,12 +62,26 @@ final class Router {
         case "acknowledgements":
             presentSettings(at: .acknowledgements)
         case "open":
-            let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-            if let target = components?.queryItems?.first(where: { $0.name == "url" })?.value {
-                resolve(target)
-            }
+            handleOpen(url)
         default:
             break
+        }
+    }
+
+    private func handleOpen(_ url: URL) {
+        let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
+        if queryItems.isEmpty {
+            clear()
+            return
+        }
+        if let plain = queryItems.first(where: { $0.name == "url" })?.value {
+            resolve(plain)
+            return
+        }
+        if let encoded = queryItems.first(where: { $0.name == "encodedUrl" })?.value,
+           let data = Data(base64Encoded: encoded),
+           let decoded = String(data: data, encoding: .utf8) {
+            resolve(decoded)
         }
     }
 
@@ -80,25 +94,27 @@ final class Router {
     }
 
     private func handleUniversalLink(_ url: URL) {
-        // Paths declared in apple-app-site-association:
-        //   /instructions, /open, /open*, /settings
-        switch url.path {
-        case "/settings":
-            path = []
-            sheet = .settings
-            settingsPath = []
-        case "/instructions":
-            presentSettings(at: .instructions)
-        case "/open":
-            let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-            if let target = components?.queryItems?.first(where: { $0.name == "url" })?.value {
-                resolve(target)
-            }
-        case "/acknowledgements":
-            presentSettings(at: .acknowledgements)
-        default:
-            break
+        // Rewrite https://(www.)convusic.app/<path>?<query> to convusic://<path>?<query>
+        // then route through the custom-scheme handler.
+        guard let host = url.host(),
+              host == "convusic.app" || host == "www.convusic.app" else {
+            return
         }
+        let prefix = "https://" + host + "/"
+        let tail = url.absoluteString
+            .replacingOccurrences(of: "http://" + host + "/", with: "")
+            .replacingOccurrences(of: prefix, with: "")
+        guard let rewritten = URL(string: "convusic://" + tail) else {
+            return
+        }
+        handleCustomScheme(rewritten)
+    }
+
+    private func clear() {
+        path = []
+        sheet = nil
+        settingsPath = []
+        pendingResolveURL = nil
     }
 
     private func resolve(
