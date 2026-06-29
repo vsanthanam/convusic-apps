@@ -1,0 +1,33 @@
+{
+  "originHash" : "c8277fcb2489a112f7e55d3fd997d6583213f53a9bceb8f027a66a4d4fd52c3c",
+  "pins" : [
+    {
+      "identity" : "jbird",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vsanthanam/JBird.git",
+      "state" : {
+        "revision" : "f2a9b2d3eb1a665ed0e055d2ccdb18dd59b8b1f9",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "9de99a78f099e59caf2b2beec65a4c45d54b2081",
+        "version" : "603.0.1"
+      }
+    },
+    {
+      "identity" : "viewscope",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vsanthanam/ViewScope.git",
+      "state" : {
+        "revision" : "d8ed6aa7aa17d1a578caede47ee24e456e3da629",
+        "version" : "1.2.1"
+      }
+    }
+  ],
+  "version" : 3
+}

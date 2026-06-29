@@ -1,14 +1,12 @@
 //
-//  ConvusicApp.swift
-//  Convusic
-//
-//  Created by Varun Santhanam on 6/27/26.
+// Convusic
+// Copyright 2026 Varun Santhanam
 //
 
 import SwiftUI
 
 @main
-struct ConvusicApp: App {
+struct ConvusicDesktopApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -1,15 +1,13 @@
 //
-//  ConvusicTests.swift
-//  ConvusicTests
-//
-//  Created by Varun Santhanam on 6/27/26.
+// Convusic
+// Copyright 2026 Varun Santhanam
 //
 
 import Testing
 
-struct ConvusicTests {
+struct ConvusicDesktopTests {
 
-    @Test func example() async throws {
+    @Test func example() {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.
         // Swift Testing Documentation
         // https://developer.apple.com/documentation/testing

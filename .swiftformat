@@ -1,0 +1,8 @@
+--extensionacl on-declarations
+--test-case-name-format preserve
+--suite-name-format preserve
+--enable testSuiteAccessControl
+--disable simplifyGenericConstraints, blankLinesAtEndOfScope, blankLinesAtStartOfScope, redundantNilInit, unusedArguments, redundantParens, wrapMultilineStatementBraces, trailingCommas, braces, opaqueGenericParameters, redundantSelf, spaceAroundOperators, redundantSwiftTestingSuite, redundantMemberwiseInit
+--header "\nConvusic\nCopyright 2026 Varun Santhanam\n"
+--exclude Sources/JBird/JBird.docc
+--swift-version 6.3

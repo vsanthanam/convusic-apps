@@ -6,63 +6,184 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		074265A02FF0353100343560 /* libConvusicKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074265982FF0350C00343560 /* libConvusicKit.a */; platformFilter = ios; };
+		074265A42FF0358E00343560 /* JBird in Frameworks */ = {isa = PBXBuildFile; productRef = 074265A32FF0358E00343560 /* JBird */; };
+		074265A62FF0358E00343560 /* JBirdBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 074265A52FF0358E00343560 /* JBirdBuilders */; };
+		074265A82FF0358E00343560 /* JBirdCodableSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 074265A72FF0358E00343560 /* JBirdCodableSupport */; };
+		074265AA2FF0358E00343560 /* JBirdCore in Frameworks */ = {isa = PBXBuildFile; productRef = 074265A92FF0358E00343560 /* JBirdCore */; };
+		074265AC2FF0358E00343560 /* JBirdMacros in Frameworks */ = {isa = PBXBuildFile; productRef = 074265AB2FF0358E00343560 /* JBirdMacros */; };
+		074265E62FF1AD9900343560 /* ViewScope in Frameworks */ = {isa = PBXBuildFile; productRef = 074265E52FF1AD9900343560 /* ViewScope */; };
+		078859C92FF300AB00938231 /* BrowserExtensionMobile.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		074265002FF02B5A00343560 /* PBXContainerItemProxy */ = {
+		0742654E2FF02E8200343560 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 074264EA2FF02B5800343560 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 074264F12FF02B5800343560;
-			remoteInfo = Convusic;
+			remoteGlobalIDString = 0742652B2FF02DFB00343560;
+			remoteInfo = ConvusicMobile;
 		};
-		0742650A2FF02B5A00343560 /* PBXContainerItemProxy */ = {
+		0742656A2FF02ED500343560 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 074264EA2FF02B5800343560 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 074264F12FF02B5800343560;
-			remoteInfo = Convusic;
+			remoteGlobalIDString = 074265562FF02EAC00343560;
+			remoteInfo = ConvusicDesktop;
+		};
+		074265A12FF0353100343560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074264EA2FF02B5800343560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 074265972FF0350C00343560;
+			remoteInfo = ConvusicKit;
+		};
+		078859C72FF300AB00938231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074264EA2FF02B5800343560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 078859B02FF300AB00938231;
+			remoteInfo = BrowserExtensionMobile;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		074265962FF0350C00343560 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078859CE2FF300AB00938231 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				078859C92FF300AB00938231 /* BrowserExtensionMobile.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		074264F22FF02B5800343560 /* Convusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		074264FF2FF02B5A00343560 /* ConvusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		074265092FF02B5A00343560 /* ConvusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0742652C2FF02DFB00343560 /* ConvusicMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvusicMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0742654A2FF02E8200343560 /* ConvusicMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvusicMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		074265572FF02EAC00343560 /* ConvusicDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvusicDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		074265662FF02ED500343560 /* ConvusicDesktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvusicDesktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		074265982FF0350C00343560 /* libConvusicKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libConvusicKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BrowserExtensionMobile.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		078859CA2FF300AB00938231 /* Exceptions for "BrowserExtensionMobile" folder in "BrowserExtensionMobile" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 078859B02FF300AB00938231 /* BrowserExtensionMobile */;
+		};
+		078859D42FF30BEF00938231 /* Exceptions for "ConvusicMobile" folder in "ConvusicMobile" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0742652B2FF02DFB00343560 /* ConvusicMobile */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		074264F42FF02B5800343560 /* Convusic */ = {
+		0742652D2FF02DFB00343560 /* ConvusicMobile */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Convusic;
+			exceptions = (
+				078859D42FF30BEF00938231 /* Exceptions for "ConvusicMobile" folder in "ConvusicMobile" target */,
+			);
+			path = ConvusicMobile;
 			sourceTree = "<group>";
 		};
-		074265022FF02B5A00343560 /* ConvusicTests */ = {
+		0742654B2FF02E8200343560 /* ConvusicMobileTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ConvusicTests;
+			path = ConvusicMobileTests;
 			sourceTree = "<group>";
 		};
-		0742650C2FF02B5A00343560 /* ConvusicUITests */ = {
+		074265582FF02EAC00343560 /* ConvusicDesktop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ConvusicUITests;
+			path = ConvusicDesktop;
+			sourceTree = "<group>";
+		};
+		074265672FF02ED500343560 /* ConvusicDesktopTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ConvusicDesktopTests;
+			sourceTree = "<group>";
+		};
+		074265992FF0350C00343560 /* ConvusicKit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ConvusicKit;
+			sourceTree = "<group>";
+		};
+		078859B22FF300AB00938231 /* BrowserExtensionMobile */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				078859CA2FF300AB00938231 /* Exceptions for "BrowserExtensionMobile" folder in "BrowserExtensionMobile" target */,
+			);
+			explicitFolders = (
+				Resources/_locales,
+				Resources/images,
+			);
+			path = BrowserExtensionMobile;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		074264EF2FF02B5800343560 /* Frameworks */ = {
+		074265292FF02DFB00343560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074265E62FF1AD9900343560 /* ViewScope in Frameworks */,
+				074265A02FF0353100343560 /* libConvusicKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		074265472FF02E8200343560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		074264FC2FF02B5900343560 /* Frameworks */ = {
+		074265542FF02EAC00343560 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		074265062FF02B5A00343560 /* Frameworks */ = {
+		074265632FF02ED500343560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		074265952FF0350C00343560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074265A62FF0358E00343560 /* JBirdBuilders in Frameworks */,
+				074265AA2FF0358E00343560 /* JBirdCore in Frameworks */,
+				074265AC2FF0358E00343560 /* JBirdMacros in Frameworks */,
+				074265A42FF0358E00343560 /* JBird in Frameworks */,
+				074265A82FF0358E00343560 /* JBirdCodableSupport in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078859AE2FF300AB00938231 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,9 +196,12 @@
 		074264E92FF02B5800343560 = {
 			isa = PBXGroup;
 			children = (
-				074264F42FF02B5800343560 /* Convusic */,
-				074265022FF02B5A00343560 /* ConvusicTests */,
-				0742650C2FF02B5A00343560 /* ConvusicUITests */,
+				0742652D2FF02DFB00343560 /* ConvusicMobile */,
+				0742654B2FF02E8200343560 /* ConvusicMobileTests */,
+				074265582FF02EAC00343560 /* ConvusicDesktop */,
+				074265672FF02ED500343560 /* ConvusicDesktopTests */,
+				074265992FF0350C00343560 /* ConvusicKit */,
+				078859B22FF300AB00938231 /* BrowserExtensionMobile */,
 				074264F32FF02B5800343560 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +209,12 @@
 		074264F32FF02B5800343560 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				074264F22FF02B5800343560 /* Convusic.app */,
-				074264FF2FF02B5A00343560 /* ConvusicTests.xctest */,
-				074265092FF02B5A00343560 /* ConvusicUITests.xctest */,
+				0742652C2FF02DFB00343560 /* ConvusicMobile.app */,
+				0742654A2FF02E8200343560 /* ConvusicMobileTests.xctest */,
+				074265572FF02EAC00343560 /* ConvusicDesktop.app */,
+				074265662FF02ED500343560 /* ConvusicDesktopTests.xctest */,
+				074265982FF0350C00343560 /* libConvusicKit.a */,
+				078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,73 +222,148 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		074264F12FF02B5800343560 /* Convusic */ = {
+		0742652B2FF02DFB00343560 /* ConvusicMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 074265132FF02B5A00343560 /* Build configuration list for PBXNativeTarget "Convusic" */;
+			buildConfigurationList = 074265362FF02DFC00343560 /* Build configuration list for PBXNativeTarget "ConvusicMobile" */;
 			buildPhases = (
-				074264EE2FF02B5800343560 /* Sources */,
-				074264EF2FF02B5800343560 /* Frameworks */,
-				074264F02FF02B5800343560 /* Resources */,
+				074265282FF02DFB00343560 /* Sources */,
+				074265292FF02DFB00343560 /* Frameworks */,
+				0742652A2FF02DFB00343560 /* Resources */,
+				078859CE2FF300AB00938231 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				074265A22FF0353100343560 /* PBXTargetDependency */,
+				078859C82FF300AB00938231 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				074264F42FF02B5800343560 /* Convusic */,
+				0742652D2FF02DFB00343560 /* ConvusicMobile */,
 			);
-			name = Convusic;
+			name = ConvusicMobile;
 			packageProductDependencies = (
+				074265E52FF1AD9900343560 /* ViewScope */,
 			);
-			productName = Convusic;
-			productReference = 074264F22FF02B5800343560 /* Convusic.app */;
+			productName = ConvusicMobile;
+			productReference = 0742652C2FF02DFB00343560 /* ConvusicMobile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		074264FE2FF02B5900343560 /* ConvusicTests */ = {
+		074265492FF02E8200343560 /* ConvusicMobileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 074265162FF02B5A00343560 /* Build configuration list for PBXNativeTarget "ConvusicTests" */;
+			buildConfigurationList = 074265502FF02E8200343560 /* Build configuration list for PBXNativeTarget "ConvusicMobileTests" */;
 			buildPhases = (
-				074264FB2FF02B5900343560 /* Sources */,
-				074264FC2FF02B5900343560 /* Frameworks */,
-				074264FD2FF02B5900343560 /* Resources */,
+				074265462FF02E8200343560 /* Sources */,
+				074265472FF02E8200343560 /* Frameworks */,
+				074265482FF02E8200343560 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				074265012FF02B5A00343560 /* PBXTargetDependency */,
+				0742654F2FF02E8200343560 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				074265022FF02B5A00343560 /* ConvusicTests */,
+				0742654B2FF02E8200343560 /* ConvusicMobileTests */,
 			);
-			name = ConvusicTests;
+			name = ConvusicMobileTests;
 			packageProductDependencies = (
 			);
-			productName = ConvusicTests;
-			productReference = 074264FF2FF02B5A00343560 /* ConvusicTests.xctest */;
+			productName = ConvusicMobileTests;
+			productReference = 0742654A2FF02E8200343560 /* ConvusicMobileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		074265082FF02B5A00343560 /* ConvusicUITests */ = {
+		074265562FF02EAC00343560 /* ConvusicDesktop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 074265192FF02B5A00343560 /* Build configuration list for PBXNativeTarget "ConvusicUITests" */;
+			buildConfigurationList = 0742655F2FF02EAD00343560 /* Build configuration list for PBXNativeTarget "ConvusicDesktop" */;
 			buildPhases = (
-				074265052FF02B5A00343560 /* Sources */,
-				074265062FF02B5A00343560 /* Frameworks */,
-				074265072FF02B5A00343560 /* Resources */,
+				074265532FF02EAC00343560 /* Sources */,
+				074265542FF02EAC00343560 /* Frameworks */,
+				074265552FF02EAC00343560 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0742650B2FF02B5A00343560 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				0742650C2FF02B5A00343560 /* ConvusicUITests */,
+				074265582FF02EAC00343560 /* ConvusicDesktop */,
 			);
-			name = ConvusicUITests;
+			name = ConvusicDesktop;
 			packageProductDependencies = (
 			);
-			productName = ConvusicUITests;
-			productReference = 074265092FF02B5A00343560 /* ConvusicUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			productName = ConvusicDesktop;
+			productReference = 074265572FF02EAC00343560 /* ConvusicDesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		074265652FF02ED500343560 /* ConvusicDesktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0742656C2FF02ED500343560 /* Build configuration list for PBXNativeTarget "ConvusicDesktopTests" */;
+			buildPhases = (
+				074265622FF02ED500343560 /* Sources */,
+				074265632FF02ED500343560 /* Frameworks */,
+				074265642FF02ED500343560 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0742656B2FF02ED500343560 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				074265672FF02ED500343560 /* ConvusicDesktopTests */,
+			);
+			name = ConvusicDesktopTests;
+			packageProductDependencies = (
+			);
+			productName = ConvusicDesktopTests;
+			productReference = 074265662FF02ED500343560 /* ConvusicDesktopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		074265972FF0350C00343560 /* ConvusicKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0742659C2FF0350C00343560 /* Build configuration list for PBXNativeTarget "ConvusicKit" */;
+			buildPhases = (
+				074265942FF0350C00343560 /* Sources */,
+				074265952FF0350C00343560 /* Frameworks */,
+				074265962FF0350C00343560 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				074265992FF0350C00343560 /* ConvusicKit */,
+			);
+			name = ConvusicKit;
+			packageProductDependencies = (
+				074265A32FF0358E00343560 /* JBird */,
+				074265A52FF0358E00343560 /* JBirdBuilders */,
+				074265A72FF0358E00343560 /* JBirdCodableSupport */,
+				074265A92FF0358E00343560 /* JBirdCore */,
+				074265AB2FF0358E00343560 /* JBirdMacros */,
+			);
+			productName = ConvusicKit;
+			productReference = 074265982FF0350C00343560 /* libConvusicKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		078859B02FF300AB00938231 /* BrowserExtensionMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 078859CB2FF300AB00938231 /* Build configuration list for PBXNativeTarget "BrowserExtensionMobile" */;
+			buildPhases = (
+				078859AD2FF300AB00938231 /* Sources */,
+				078859AE2FF300AB00938231 /* Frameworks */,
+				078859AF2FF300AB00938231 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				078859B22FF300AB00938231 /* BrowserExtensionMobile */,
+			);
+			name = BrowserExtensionMobile;
+			packageProductDependencies = (
+			);
+			productName = BrowserExtensionMobile;
+			productReference = 078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -173,16 +375,26 @@
 				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
-					074264F12FF02B5800343560 = {
+					0742652B2FF02DFB00343560 = {
 						CreatedOnToolsVersion = 26.5;
 					};
-					074264FE2FF02B5900343560 = {
+					074265492FF02E8200343560 = {
 						CreatedOnToolsVersion = 26.5;
-						TestTargetID = 074264F12FF02B5800343560;
+						TestTargetID = 0742652B2FF02DFB00343560;
 					};
-					074265082FF02B5A00343560 = {
+					074265562FF02EAC00343560 = {
 						CreatedOnToolsVersion = 26.5;
-						TestTargetID = 074264F12FF02B5800343560;
+					};
+					074265652FF02ED500343560 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 074265562FF02EAC00343560;
+					};
+					074265972FF0350C00343560 = {
+						CreatedOnToolsVersion = 26.5;
+						LastSwiftMigration = 2650;
+					};
+					078859B02FF300AB00938231 = {
+						CreatedOnToolsVersion = 26.5;
 					};
 				};
 			};
@@ -195,34 +407,55 @@
 			);
 			mainGroup = 074264E92FF02B5800343560;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */,
+				074265E42FF1AD9900343560 /* XCRemoteSwiftPackageReference "ViewScope" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 074264F32FF02B5800343560 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				074264F12FF02B5800343560 /* Convusic */,
-				074264FE2FF02B5900343560 /* ConvusicTests */,
-				074265082FF02B5A00343560 /* ConvusicUITests */,
+				0742652B2FF02DFB00343560 /* ConvusicMobile */,
+				074265492FF02E8200343560 /* ConvusicMobileTests */,
+				074265562FF02EAC00343560 /* ConvusicDesktop */,
+				074265652FF02ED500343560 /* ConvusicDesktopTests */,
+				074265972FF0350C00343560 /* ConvusicKit */,
+				078859B02FF300AB00938231 /* BrowserExtensionMobile */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		074264F02FF02B5800343560 /* Resources */ = {
+		0742652A2FF02DFB00343560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		074264FD2FF02B5900343560 /* Resources */ = {
+		074265482FF02E8200343560 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		074265072FF02B5A00343560 /* Resources */ = {
+		074265552FF02EAC00343560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		074265642FF02ED500343560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078859AF2FF300AB00938231 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +465,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		074264EE2FF02B5800343560 /* Sources */ = {
+		074265282FF02DFB00343560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		074264FB2FF02B5900343560 /* Sources */ = {
+		074265462FF02E8200343560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		074265052FF02B5A00343560 /* Sources */ = {
+		074265532FF02EAC00343560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		074265622FF02ED500343560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		074265942FF0350C00343560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078859AD2FF300AB00938231 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,15 +510,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		074265012FF02B5A00343560 /* PBXTargetDependency */ = {
+		0742654F2FF02E8200343560 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 074264F12FF02B5800343560 /* Convusic */;
-			targetProxy = 074265002FF02B5A00343560 /* PBXContainerItemProxy */;
+			target = 0742652B2FF02DFB00343560 /* ConvusicMobile */;
+			targetProxy = 0742654E2FF02E8200343560 /* PBXContainerItemProxy */;
 		};
-		0742650B2FF02B5A00343560 /* PBXTargetDependency */ = {
+		0742656B2FF02ED500343560 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 074264F12FF02B5800343560 /* Convusic */;
-			targetProxy = 0742650A2FF02B5A00343560 /* PBXContainerItemProxy */;
+			target = 074265562FF02EAC00343560 /* ConvusicDesktop */;
+			targetProxy = 0742656A2FF02ED500343560 /* PBXContainerItemProxy */;
+		};
+		074265A22FF0353100343560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 074265972FF0350C00343560 /* ConvusicKit */;
+			targetProxy = 074265A12FF0353100343560 /* PBXContainerItemProxy */;
+		};
+		078859C82FF300AB00938231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 078859B02FF300AB00938231 /* BrowserExtensionMobile */;
+			targetProxy = 078859C72FF300AB00938231 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +593,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -382,14 +649,17 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
-		074265142FF02B5A00343560 /* Debug */ = {
+		074265342FF02DFC00343560 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ConvusicMobile/ConvusicMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
@@ -398,6 +668,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ConvusicMobile/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -406,34 +678,37 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Debug;
 		};
-		074265152FF02B5A00343560 /* Release */ = {
+		074265352FF02DFC00343560 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ConvusicMobile/ConvusicMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
@@ -442,6 +717,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ConvusicMobile/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -450,30 +727,32 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Release;
 		};
-		074265172FF02B5A00343560 /* Debug */ = {
+		074265512FF02E8200343560 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,22 +763,23 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Convusic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Convusic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvusicMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConvusicMobile";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Debug;
 		};
-		074265182FF02B5A00343560 /* Release */ = {
+		074265522FF02E8200343560 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,24 +790,94 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Convusic.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Convusic";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvusicMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConvusicMobile";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Release;
 		};
-		0742651A2FF02B5A00343560 /* Debug */ = {
+		074265602FF02EAD00343560 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		074265612FF02EAD00343560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		0742656D2FF02ED500343560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
@@ -535,24 +885,25 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicDesktopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = Convusic;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvusicDesktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConvusicDesktop";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Debug;
 		};
-		0742651B2FF02B5A00343560 /* Release */ = {
+		0742656E2FF02ED500343560 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
@@ -560,18 +911,133 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.ConvusicDesktopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = Convusic;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvusicDesktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConvusicDesktop";
 				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		0742659D2FF0350C00343560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0742659E2FF0350C00343560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		078859CC2FF300AB00938231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrowserExtensionMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BrowserExtensionMobile;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic.BrowserExtensionMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		078859CD2FF300AB00938231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrowserExtensionMobile/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BrowserExtensionMobile;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic.BrowserExtensionMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -587,34 +1053,113 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		074265132FF02B5A00343560 /* Build configuration list for PBXNativeTarget "Convusic" */ = {
+		074265362FF02DFC00343560 /* Build configuration list for PBXNativeTarget "ConvusicMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				074265142FF02B5A00343560 /* Debug */,
-				074265152FF02B5A00343560 /* Release */,
+				074265342FF02DFC00343560 /* Debug */,
+				074265352FF02DFC00343560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		074265162FF02B5A00343560 /* Build configuration list for PBXNativeTarget "ConvusicTests" */ = {
+		074265502FF02E8200343560 /* Build configuration list for PBXNativeTarget "ConvusicMobileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				074265172FF02B5A00343560 /* Debug */,
-				074265182FF02B5A00343560 /* Release */,
+				074265512FF02E8200343560 /* Debug */,
+				074265522FF02E8200343560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		074265192FF02B5A00343560 /* Build configuration list for PBXNativeTarget "ConvusicUITests" */ = {
+		0742655F2FF02EAD00343560 /* Build configuration list for PBXNativeTarget "ConvusicDesktop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0742651A2FF02B5A00343560 /* Debug */,
-				0742651B2FF02B5A00343560 /* Release */,
+				074265602FF02EAD00343560 /* Debug */,
+				074265612FF02EAD00343560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0742656C2FF02ED500343560 /* Build configuration list for PBXNativeTarget "ConvusicDesktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0742656D2FF02ED500343560 /* Debug */,
+				0742656E2FF02ED500343560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0742659C2FF0350C00343560 /* Build configuration list for PBXNativeTarget "ConvusicKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0742659D2FF0350C00343560 /* Debug */,
+				0742659E2FF0350C00343560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		078859CB2FF300AB00938231 /* Build configuration list for PBXNativeTarget "BrowserExtensionMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078859CC2FF300AB00938231 /* Debug */,
+				078859CD2FF300AB00938231 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vsanthanam/JBird.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		074265E42FF1AD9900343560 /* XCRemoteSwiftPackageReference "ViewScope" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vsanthanam/ViewScope.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		074265A32FF0358E00343560 /* JBird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBird;
+		};
+		074265A52FF0358E00343560 /* JBirdBuilders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdBuilders;
+		};
+		074265A72FF0358E00343560 /* JBirdCodableSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdCodableSupport;
+		};
+		074265A92FF0358E00343560 /* JBirdCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdCore;
+		};
+		074265AB2FF0358E00343560 /* JBirdMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdMacros;
+		};
+		074265E52FF1AD9900343560 /* ViewScope */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265E42FF1AD9900343560 /* XCRemoteSwiftPackageReference "ViewScope" */;
+			productName = ViewScope;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 074264EA2FF02B5800343560 /* Project object */;
 }
