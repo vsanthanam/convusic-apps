@@ -11,11 +11,13 @@ enum Route: Hashable {
 }
 
 enum SheetRoute: Hashable, Identifiable {
+
     case settings
 
     var id: Self {
         self
     }
+
 }
 
 enum SettingsRoute: Hashable {
@@ -34,7 +36,6 @@ final class Router {
 
     var settingsPath: [SettingsRoute] = []
 
-    /// When set, the search screen should resolve this URL and clear the value.
     var pendingResolveURL: String?
 
     func handle(_ url: URL) {
@@ -53,16 +54,14 @@ final class Router {
             sheet = nil
             path = [.history]
         case "settings":
-            path = []
-            sheet = .settings
-            settingsPath = []
+            presentSettings()
         case "default-service":
             presentSettings(at: .defaultService)
         case "instructions":
             presentSettings(at: .instructions)
         case "acknowledgements":
             presentSettings(at: .acknowledgements)
-        case "resolve":
+        case "open":
             let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
             if let target = components?.queryItems?.first(where: { $0.name == "url" })?.value {
                 resolve(target)
@@ -72,25 +71,39 @@ final class Router {
         }
     }
 
-    private func presentSettings(at route: SettingsRoute) {
+    private func presentSettings(
+        at route: SettingsRoute? = nil
+    ) {
         path = []
         sheet = .settings
-        settingsPath = [route]
+        settingsPath = [route].compactMap(\.self)
     }
 
     private func handleUniversalLink(_ url: URL) {
-        // Expected shape: https://convusic.app/r/<percent-encoded-url>
-        // Adjust to match the App Site Association path you publish.
-        let components = url.pathComponents.dropFirst()
-        guard components.first == "r",
-              let encoded = components.dropFirst().first,
-              let decoded = encoded.removingPercentEncoding else {
-            return
+        // Paths declared in apple-app-site-association:
+        //   /instructions, /open, /open*, /settings
+        switch url.path {
+        case "/settings":
+            path = []
+            sheet = .settings
+            settingsPath = []
+        case "/instructions":
+            presentSettings(at: .instructions)
+        case "/open":
+            let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+            if let target = components?.queryItems?.first(where: { $0.name == "url" })?.value {
+                resolve(target)
+            }
+        case "/acknowledgements":
+            presentSettings(at: .acknowledgements)
+        default:
+            break
         }
-        resolve(decoded)
     }
 
-    private func resolve(_ target: String) {
+    private func resolve(
+        _ target: String
+    ) {
         path = []
         sheet = nil
         settingsPath = []

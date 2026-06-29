@@ -29,6 +29,7 @@ struct SearchBar: View {
                     "Paste a song, album, or artist link",
                     text: $input
                 )
+                .keyboardType(.URL)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .submitLabel(.go)
@@ -62,26 +63,24 @@ struct SearchBar: View {
                 .easeInOut(duration: 0.18),
                 value: input.isEmpty
             )
-            if !isLoading {
-                Button {
-                    onSearch()
-                } label: {
-                    HStack(spacing: 8) {
-                        if isLoading {
-                            ProgressView()
-                                .controlSize(.small)
-                        } else {
-                            Image(systemName: "sparkle.magnifyingglass")
-                        }
-                        Text(isLoading ? "Resolving…" : "Resolve")
-                            .fontWeight(.semibold)
+            Button {
+                onSearch()
+            } label: {
+                HStack(spacing: 8) {
+                    if isLoading {
+                        ProgressView()
+                            .controlSize(.small)
+                    } else {
+                        Image(systemName: "sparkle.magnifyingglass")
                     }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 30)
+                    Text(isLoading ? "Searching" : "Search")
+                        .fontWeight(.semibold)
                 }
-                .buttonStyle(.glassProminent)
-                .disabled(input.isEmpty)
+                .frame(maxWidth: .infinity)
+                .frame(height: 30)
             }
+            .buttonStyle(.glassProminent)
+            .disabled(input.isEmpty || isLoading)
         }
     }
 

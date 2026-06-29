@@ -21,8 +21,31 @@ struct SearchView: View {
         ScrollView {
             VStack(spacing: 28) {
                 if let response {
-                    resultSection(for: response)
-                        .transition(.scale(scale: 0.94).combined(with: .opacity))
+                    VStack(spacing: 24) {
+                        EntityCard(entity: response.entity) {
+                            self.response = nil
+                        }
+                        if !response.links.isEmpty {
+                            VStack(
+                                alignment: .leading,
+                                spacing: 12
+                            ) {
+                                Text("Open in")
+                                    .font(.headline)
+                                    .padding(.leading, 4)
+                                VStack(spacing: 10) {
+                                    ForEach(response.links) { link in
+                                        if let url = link.link {
+                                            PlatformLinkButton(platformLink: link) {
+                                                openURL(url)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .transition(.scale(scale: 0.94).combined(with: .opacity))
                 } else {
                     Header()
                     SearchBar(
@@ -82,41 +105,6 @@ struct SearchView: View {
 
     @State
     private var input: String = ""
-
-    private func resultSection(
-        for response: ResolveResponse
-    ) -> some View {
-        VStack(spacing: 24) {
-            EntityCard(entity: response.entity) {
-                self.response = nil
-            }
-            if !response.links.isEmpty {
-                linksSection(for: response)
-            }
-        }
-    }
-
-    private func linksSection(
-        for response: ResolveResponse
-    ) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Open in")
-                .font(.headline)
-                .padding(.leading, 4)
-
-            VStack(spacing: 10) {
-                ForEach(response.links) { link in
-                    if let url = link.link {
-                        PlatformLinkButton(platformLink: link) {
-                            openURL(url)
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // MARK: - Private
 
     @Environment(\.openURL)
     private var openURL

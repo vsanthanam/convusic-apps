@@ -11,6 +11,7 @@ Icon
 ## User settings
 xcuserdata/
 *.xcuserstate
+*.xcbkptlist
 
 ## Build generated
 build/
