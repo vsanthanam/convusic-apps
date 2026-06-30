@@ -14,6 +14,11 @@ struct AcknowledgementsView: View {
                     AcknowledgementView(acknowledment: acknowledgement)
                 }
             }
+            Section("Services") {
+                ForEach(Acknowledgement.services) { acknowledgement in
+                    AcknowledgementView(acknowledment: acknowledgement)
+                }
+            }
             Section("Powered by these services") {
                 Text("Apple Music")
                 Text("Spotify")

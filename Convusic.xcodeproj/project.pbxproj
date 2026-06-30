@@ -95,6 +95,20 @@
 			);
 			target = 0742652B2FF02DFB00343560 /* ConvusicMobile */;
 		};
+		078859F82FF370F400938231 /* Exceptions for "ConvusicKit" folder in "ConvusicMobile" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Acknowledgements/Acknowledment.swift,
+			);
+			target = 0742652B2FF02DFB00343560 /* ConvusicMobile */;
+		};
+		078859F92FF370F400938231 /* Exceptions for "ConvusicKit" folder in "ConvusicKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Acknowledgements/Acknowledment.swift,
+			);
+			target = 074265972FF0350C00343560 /* ConvusicKit */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -123,6 +137,10 @@
 		};
 		074265992FF0350C00343560 /* ConvusicKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				078859F82FF370F400938231 /* Exceptions for "ConvusicKit" folder in "ConvusicMobile" target */,
+				078859F92FF370F400938231 /* Exceptions for "ConvusicKit" folder in "ConvusicKit" target */,
+			);
 			path = ConvusicKit;
 			sourceTree = "<group>";
 		};

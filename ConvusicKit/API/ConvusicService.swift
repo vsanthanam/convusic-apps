@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import JBird
 import SwiftUI
 
 extension EnvironmentValues {
@@ -107,7 +108,7 @@ public final class ConvusicService: Sendable {
 
         request.timeoutInterval = 20
 
-        request.httpBody = try JSONEncoder().encode(
+        request.httpBody = try JSON.Encoder().encode(
             ResolveRequest(
                 url: link,
                 market: market
@@ -119,7 +120,7 @@ public final class ConvusicService: Sendable {
         let status = (response as? HTTPURLResponse)?.statusCode ?? -1
 
         guard (200..<300).contains(status) else {
-            if let apiError = try? JSONDecoder().decode(
+            if let apiError = try? JSON.Decoder().decode(
                 APIError.self,
                 from: data
             ) {
@@ -132,7 +133,7 @@ public final class ConvusicService: Sendable {
                 )
             )
         }
-        return try JSONDecoder().decode(
+        return try JSON.Decoder().decode(
             ResolveResponse.self,
             from: data
         )
@@ -140,7 +141,7 @@ public final class ConvusicService: Sendable {
 
     public func health() async throws -> HealthResponse {
         let (data, _) = try await session.data(from: baseURL.appendingPathComponent("health"))
-        return try JSONDecoder().decode(
+        return try JSON.Decoder().decode(
             HealthResponse.self,
             from: data
         )

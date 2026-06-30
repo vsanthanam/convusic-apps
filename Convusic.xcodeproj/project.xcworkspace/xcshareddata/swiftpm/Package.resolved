@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vsanthanam/JBird.git",
       "state" : {
-        "revision" : "f2a9b2d3eb1a665ed0e055d2ccdb18dd59b8b1f9",
-        "version" : "2.2.0"
+        "revision" : "4fc9acc305046e6c5e3afffdcd19de7bb840a201",
+        "version" : "2.2.1"
       }
     },
     {

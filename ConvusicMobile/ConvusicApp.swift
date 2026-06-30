@@ -4,7 +4,9 @@
 //
 
 import ConvusicKit
+import SwiftData
 import SwiftUI
+import UIKit
 
 @main
 struct ConvusicApp: App {
@@ -19,12 +21,37 @@ struct ConvusicApp: App {
                 environment: .staging,
             )
             .environment(router)
+            .environment(preferenceCoordinator)
+            .environment(historyStore)
+            .modelContainer(historyStore.container)
             .onOpenURL { url in
                 router.handle(url)
             }
-            .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
-                if let url = activity.webpageURL {
-                    router.handle(url)
+            .task {
+                historyStore.reconfigure(
+                    cloudEnabled: preferenceCoordinator.isCloudEnabled,
+                    accountAvailable: preferenceCoordinator.isCloudAccountAvailable
+                )
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+            .onChange(of: preferenceCoordinator.isCloudEnabled) { _, enabled in
+                historyStore.reconfigure(
+                    cloudEnabled: enabled,
+                    accountAvailable: preferenceCoordinator.isCloudAccountAvailable
+                )
+            }
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .active {
+                    // The user may have signed in/out of iCloud while we were
+                    // backgrounded (e.g. in Settings.app); re-check, then graduate
+                    // or downgrade the history container to match, and run a dedup
+                    // backstop in case a remote-change push was missed.
+                    preferenceCoordinator.refreshCloudAvailability()
+                    historyStore.reconfigure(
+                        cloudEnabled: preferenceCoordinator.isCloudEnabled,
+                        accountAvailable: preferenceCoordinator.isCloudAccountAvailable
+                    )
+                    historyStore.deduplicate()
                 }
             }
         }
@@ -32,5 +59,14 @@ struct ConvusicApp: App {
 
     @State
     private var router = Router()
+
+    @State
+    private var preferenceCoordinator = PreferenceCoordinator()
+
+    @State
+    private var historyStore = HistoryStore()
+
+    @Environment(\.scenePhase)
+    private var scenePhase
 
 }

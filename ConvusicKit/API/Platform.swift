@@ -47,6 +47,28 @@ public enum Platform: Codable, Hashable, Sendable {
         try c.encode(rawValue)
     }
 
+    /// Best-effort inference of the platform from a URL host (e.g. the
+    /// `service` recorded with a history entry). Falls back to `.unknown(host)`.
+    public init(host: String?) {
+        let host = (host ?? "").lowercased()
+        switch true {
+        case host.contains("spotify"):
+            self = .spotify
+        case host.contains("music.apple"), host.contains("itunes.apple"):
+            self = .appleMusic
+        case host.contains("deezer"):
+            self = .deezer
+        case host.contains("tidal"):
+            self = .tidal
+        case host.contains("youtube"), host.contains("youtu.be"):
+            self = .youtubeMusic
+        case host.contains("amazon"):
+            self = .amazonMusic
+        default:
+            self = .unknown(host)
+        }
+    }
+
     public var rawValue: String {
         switch self {
         case .spotify:

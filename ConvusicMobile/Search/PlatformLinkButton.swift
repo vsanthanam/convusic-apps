@@ -50,40 +50,17 @@ struct PlatformLinkButton: View {
     private let platformLink: PlatformLink
     private let onTap: @MainActor () -> Void
 
-    @ViewBuilder
     private func platformBadge(
         for platform: Platform
     ) -> some View {
-        let appearance = platformAppearance(for: platform)
         ZStack {
             RoundedRectangle(cornerRadius: 11, style: .continuous)
-                .fill(appearance.color.opacity(0.18))
-            Image(systemName: appearance.symbol)
+                .fill(platform.tint.opacity(0.18))
+            Image(systemName: platform.symbol)
                 .font(.system(size: 18, weight: .semibold))
-                .foregroundStyle(appearance.color)
+                .foregroundStyle(platform.tint)
         }
         .frame(width: 40, height: 40)
-    }
-
-    private func platformAppearance(
-        for platform: Platform
-    ) -> (symbol: String, color: Color) {
-        switch platform {
-        case .spotify:
-            ("music.note", .green)
-        case .appleMusic:
-            ("applelogo", .pink)
-        case .deezer:
-            ("waveform.circle.fill", .purple)
-        case .tidal:
-            ("water.waves", .cyan)
-        case .youtubeMusic:
-            ("play.rectangle.fill", .red)
-        case .amazonMusic:
-            ("cart.fill", .orange)
-        case .unknown:
-            ("link", .gray)
-        }
     }
 }
 

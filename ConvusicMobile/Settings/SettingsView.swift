@@ -3,15 +3,16 @@
 // Copyright 2026 Varun Santhanam
 //
 
+import ConvusicKit
 import SwiftUI
 
 struct SettingsView: View {
 
-    @State
-    var copyFromClipboard = false
+    @CloudPreference(.openFromClipboard)
+    private var copyFromClipboard
 
-    @State
-    var useCloud = false
+    @CloudEnabled
+    private var useCloud
 
     var body: some View {
         @Bindable var router = router
@@ -25,7 +26,7 @@ struct SettingsView: View {
                         )
                     }
                 }
-                Section("Options") {
+                Section {
                     Toggle(isOn: $copyFromClipboard) {
                         Label(
                             "Copy from Clipboard",
@@ -37,6 +38,13 @@ struct SettingsView: View {
                             "Use iCloud",
                             systemImage: "icloud"
                         )
+                    }
+                    .disabled(!preferences.isCloudAccountAvailable)
+                } header: {
+                    Text("Options")
+                } footer: {
+                    if !preferences.isCloudAccountAvailable {
+                        Text("Sign in to iCloud to sync your settings across your devices.")
                     }
                 }
                 Section("Get Help") {
@@ -79,6 +87,9 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
+            .task {
+                preferences.refreshCloudAvailability()
+            }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button {
@@ -107,9 +118,13 @@ struct SettingsView: View {
     @Environment(Router.self)
     private var router
 
+    @Environment(PreferenceCoordinator.self)
+    private var preferences
+
 }
 
 #Preview {
     SettingsView()
         .environment(Router())
+        .environment(PreferenceCoordinator())
 }

@@ -3,6 +3,7 @@
 // Copyright 2026 Varun Santhanam
 //
 
+import ConvusicKit
 import SwiftUI
 import ViewScope
 
@@ -25,7 +26,10 @@ struct RootView<T>: View where T: View {
                 .navigationDestination(for: Route.self) { route in
                     switch route {
                     case .history:
+                        // `.id` forces `@Query` to tear down and re-bind to the new
+                        // store's context whenever the container is rebuilt.
                         HistoryView()
+                            .id(historyStore.generation)
                     }
                 }
         }
@@ -48,6 +52,9 @@ struct RootView<T>: View where T: View {
     @Environment(Router.self)
     private var router
 
+    @Environment(HistoryStore.self)
+    private var historyStore
+
 }
 
 #Preview {
@@ -56,4 +63,5 @@ struct RootView<T>: View where T: View {
             .font(.title2.bold())
     }
     .environment(Router())
+    .environment(HistoryStore())
 }
