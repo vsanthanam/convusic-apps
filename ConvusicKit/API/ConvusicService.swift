@@ -10,10 +10,7 @@ import SwiftUI
 extension EnvironmentValues {
 
     @Entry
-    var convusicService = ConvusicService(
-        environment: .staging,
-        apiKey: "d6a8c3c4-e997-4835-9441-f626bc7546b0"
-    )
+    var convusicService = ConvusicService.shared
 
 }
 
@@ -78,7 +75,14 @@ public final class ConvusicService: Sendable {
         case development = "http://localhost:3000"
     }
 
-    init(
+    /// The default client shared by the app and the Safari extension so both agree
+    /// on environment + key. Change here to flip to production.
+    public static let shared = ConvusicService(
+        environment: .staging,
+        apiKey: "d6a8c3c4-e997-4835-9441-f626bc7546b0"
+    )
+
+    public init(
         environment: Environment,
         apiKey: String,
         session: URLSession = .shared
@@ -139,8 +143,13 @@ public final class ConvusicService: Sendable {
         )
     }
 
+    @discardableResult
     public func health() async throws -> HealthResponse {
-        let (data, _) = try await session.data(from: baseURL.appendingPathComponent("health"))
+        let (data, response) = try await session.data(from: baseURL.appendingPathComponent("health"))
+        let status = (response as? HTTPURLResponse)?.statusCode ?? -1
+        guard (200..<300).contains(status) else {
+            throw HealthError()
+        }
         return try JSON.Decoder().decode(
             HealthResponse.self,
             from: data
@@ -153,4 +162,8 @@ public final class ConvusicService: Sendable {
 
     private let session: URLSession
 
+}
+
+struct HealthError: Error {
+    init() {}
 }

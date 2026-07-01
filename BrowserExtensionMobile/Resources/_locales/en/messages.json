@@ -1,10 +1,54 @@
 {
     "extension_name": {
-        "message": "BrowserExtensionMobile",
+        "message": "Convusic",
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "This is BrowserExtensionMobile. You should tell us what your extension does here.",
+        "message": "Open music streaming links in your preferred music service.",
         "description": "Description of what the extension does."
+    },
+    "popup_title": {
+        "message": "Convusic",
+        "description": "Popup wordmark / title."
+    },
+    "no_service_description": {
+        "message": "No preferred service set yet.",
+        "description": "Subtitle when the user has not chosen a service."
+    },
+    "service_active_description": {
+        "message": "Opening links in $service$.",
+        "description": "Subtitle when a preferred service is configured.",
+        "placeholders": {
+            "service": {
+                "content": "$1",
+                "example": "Apple Music"
+            }
+        }
+    },
+    "open_button_description": {
+        "message": "Open in $service$",
+        "description": "Primary action button text.",
+        "placeholders": {
+            "service": {
+                "content": "$1",
+                "example": "Apple Music"
+            }
+        }
+    },
+    "open_button_generic": {
+        "message": "Open in Convusic",
+        "description": "Primary action button text when the service name is unknown."
+    },
+    "settings_button_description": {
+        "message": "Settings",
+        "description": "Secondary action button text."
+    },
+    "banner_loading": {
+        "message": "Finding this on your service…",
+        "description": "Loading conversion banner message."
+    },
+    "banner_failure": {
+        "message": "Couldn’t convert this link.",
+        "description": "Failed conversion banner message."
     }
 }

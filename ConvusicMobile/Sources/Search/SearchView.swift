@@ -50,7 +50,7 @@ struct SearchView: View {
                     Header()
                     SearchBar(
                         input: $input,
-                        isLoading: $isLoading
+                        isLoading: isLoading
                     ) {
                         scope.task {
                             await search(input)
@@ -78,14 +78,6 @@ struct SearchView: View {
                 }
                 .accessibilityLabel("Settings")
             }
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    router.path.append(.history)
-                } label: {
-                    Image(systemName: "clock.arrow.circlepath")
-                }
-                .accessibilityLabel("History")
-            }
         }
         .onChange(of: router.pendingResolveURL) { _, target in
             guard let target else { return }
@@ -108,6 +100,12 @@ struct SearchView: View {
                 Text(errorMessage)
             }
         }
+        .task {
+            await sanityCheck()
+        }
+        .sheet(isPresented: $showFail) {
+            Text("Plop")
+        }
     }
 
     // MARK: - Private
@@ -117,9 +115,6 @@ struct SearchView: View {
 
     @Environment(Router.self)
     private var router
-
-    @Environment(HistoryStore.self)
-    private var historyStore
 
     @State
     private var input: String = ""
@@ -143,15 +138,9 @@ struct SearchView: View {
         isLoading = true
         errorMessage = nil
         do {
-            let resolved = try await convusic.resolve(string)
+            let market = Locale.current.region?.identifier
+            let resolved = try await convusic.resolve(string, market: market)
             response = resolved
-            // Record the resolved link to history. The input `string` is exactly
-            // what a history-row tap replays via `pendingResolveURL`, so the
-            // recorded URL matches the replayed one. Skips non-http(s) input;
-            // `record(...)` itself no-ops on `.unknown` entities.
-            if let url = URL(string: string), url.scheme?.hasPrefix("http") == true {
-                historyStore.record(url: url, entity: resolved.entity)
-            }
             isLoading = false
         } catch {
             // Surface the failure: clear any stale result card so the user isn't
@@ -159,6 +148,17 @@ struct SearchView: View {
             isLoading = false
             response = nil
             errorMessage = error.localizedDescription
+        }
+    }
+
+    @State
+    private var showFail = false
+
+    private func sanityCheck() async {
+        do {
+            try await convusic.health()
+        } catch {
+            showFail = true
         }
     }
 }
@@ -172,5 +172,4 @@ struct SearchView: View {
         SearchView(scope: $scope)
     }
     .environment(Router())
-    .environment(HistoryStore())
 }

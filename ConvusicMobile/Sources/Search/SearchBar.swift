@@ -12,8 +12,7 @@ struct SearchBar: View {
     @Binding
     var input: String
 
-    @Binding
-    var isLoading: Bool
+    let isLoading: Bool
 
     let onSearch: @MainActor () -> Void
 
@@ -63,24 +62,26 @@ struct SearchBar: View {
                 .easeInOut(duration: 0.18),
                 value: input.isEmpty
             )
-            Button {
-                onSearch()
-            } label: {
-                HStack(spacing: 8) {
-                    if isLoading {
-                        ProgressView()
-                            .controlSize(.small)
-                    } else {
-                        Image(systemName: "sparkle.magnifyingglass")
+            if !input.isEmpty {
+                Button {
+                    onSearch()
+                } label: {
+                    HStack(spacing: 8) {
+                        if isLoading {
+                            ProgressView()
+                                .controlSize(.small)
+                        } else {
+                            Image(systemName: "sparkle.magnifyingglass")
+                        }
+                        Text(isLoading ? "Searching" : "Search")
+                            .fontWeight(.semibold)
                     }
-                    Text(isLoading ? "Searching" : "Search")
-                        .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 30)
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 30)
+                .buttonStyle(.glassProminent)
+                .disabled(input.isEmpty || isLoading)
             }
-            .buttonStyle(.glassProminent)
-            .disabled(input.isEmpty || isLoading)
         }
     }
 
@@ -88,21 +89,19 @@ struct SearchBar: View {
 
 #Preview("Empty", traits: .sizeThatFitsLayout) {
     @Previewable @State var input = ""
-    @Previewable @State var isLoading = false
-    SearchBar(input: $input, isLoading: $isLoading) {}
+    SearchBar(input: $input, isLoading: false) {}
         .padding()
 }
 
 #Preview("Filled", traits: .sizeThatFitsLayout) {
     @Previewable @State var input = "https://open.spotify.com/track/123"
     @Previewable @State var isLoading = false
-    SearchBar(input: $input, isLoading: $isLoading) {}
+    SearchBar(input: $input, isLoading: false) {}
         .padding()
 }
 
 #Preview("Loading", traits: .sizeThatFitsLayout) {
     @Previewable @State var input = "https://open.spotify.com/track/123"
-    @Previewable @State var isLoading = true
-    SearchBar(input: $input, isLoading: $isLoading) {}
+    SearchBar(input: $input, isLoading: true) {}
         .padding()
 }

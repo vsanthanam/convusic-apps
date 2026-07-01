@@ -22,7 +22,14 @@ public enum Platform: Codable, Hashable, Sendable {
     public init(
         from decoder: Decoder
     ) throws {
-        switch try decoder.singleValueContainer().decode(String.self) {
+        try self.init(rawValue: decoder.singleValueContainer().decode(String.self))
+    }
+
+    /// Reconstruct a `Platform` from its ``rawValue`` string. Non-failable: an
+    /// unrecognized string maps to `.unknown(raw)`. `Platform` is not
+    /// `RawRepresentable` because of that fallback, so this is a plain initializer.
+    public init(rawValue raw: String) {
+        switch raw {
         case "spotify":
             self = .spotify
         case "appleMusic":
@@ -35,8 +42,8 @@ public enum Platform: Codable, Hashable, Sendable {
             self = .youtubeMusic
         case "amazonMusic":
             self = .amazonMusic
-        case let other:
-            self = .unknown(other)
+        default:
+            self = .unknown(raw)
         }
     }
 

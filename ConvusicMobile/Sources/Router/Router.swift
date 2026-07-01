@@ -6,9 +6,9 @@
 import Foundation
 import Observation
 
-enum Route: Hashable {
-    case history
-}
+/// Navigation-stack destinations. Currently empty (history was removed); kept as
+/// the `NavigationStack` path element type for future push destinations.
+enum Route: Hashable {}
 
 enum SheetRoute: Hashable, Identifiable {
 
@@ -50,9 +50,6 @@ final class Router {
         _ url: URL
     ) {
         switch url.host {
-        case "history":
-            sheet = nil
-            path = [.history]
         case "settings":
             presentSettings()
         case "default-service":

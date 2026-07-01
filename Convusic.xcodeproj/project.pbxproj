@@ -15,6 +15,17 @@
 		074265AC2FF0358E00343560 /* JBirdMacros in Frameworks */ = {isa = PBXBuildFile; productRef = 074265AB2FF0358E00343560 /* JBirdMacros */; };
 		074265E62FF1AD9900343560 /* ViewScope in Frameworks */ = {isa = PBXBuildFile; productRef = 074265E52FF1AD9900343560 /* ViewScope */; };
 		078859C92FF300AB00938231 /* BrowserExtensionMobile.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07885A0A2FF3806300938231 /* libConvusicKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074265982FF0350C00343560 /* libConvusicKit.a */; };
+		07885EA12FF381A100938231 /* JBird in Frameworks */ = {isa = PBXBuildFile; productRef = 07885EA02FF381A100938231 /* JBird */; };
+		07885EA32FF381A100938231 /* JBirdBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 07885EA22FF381A100938231 /* JBirdBuilders */; };
+		07885EA52FF381A100938231 /* JBirdCodableSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 07885EA42FF381A100938231 /* JBirdCodableSupport */; };
+		07885EA72FF381A100938231 /* JBirdCore in Frameworks */ = {isa = PBXBuildFile; productRef = 07885EA62FF381A100938231 /* JBirdCore */; };
+		07885EA92FF381A100938231 /* JBirdMacros in Frameworks */ = {isa = PBXBuildFile; productRef = 07885EA82FF381A100938231 /* JBirdMacros */; };
+		07EF00000000000000000001 /* JBird in Frameworks */ = {isa = PBXBuildFile; productRef = 07EE00000000000000000001 /* JBird */; };
+		07EF00000000000000000002 /* JBirdBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 07EE00000000000000000002 /* JBirdBuilders */; };
+		07EF00000000000000000003 /* JBirdCodableSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 07EE00000000000000000003 /* JBirdCodableSupport */; };
+		07EF00000000000000000004 /* JBirdCore in Frameworks */ = {isa = PBXBuildFile; productRef = 07EE00000000000000000004 /* JBirdCore */; };
+		07EF00000000000000000005 /* JBirdMacros in Frameworks */ = {isa = PBXBuildFile; productRef = 07EE00000000000000000005 /* JBirdMacros */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 078859B02FF300AB00938231;
 			remoteInfo = BrowserExtensionMobile;
+		};
+		07885A0B2FF3806300938231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074264EA2FF02B5800343560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 074265972FF0350C00343560;
+			remoteInfo = ConvusicKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -163,8 +181,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07885EA52FF381A100938231 /* JBirdCodableSupport in Frameworks */,
+				07885EA12FF381A100938231 /* JBird in Frameworks */,
 				074265E62FF1AD9900343560 /* ViewScope in Frameworks */,
+				07885EA32FF381A100938231 /* JBirdBuilders in Frameworks */,
 				074265A02FF0353100343560 /* libConvusicKit.a in Frameworks */,
+				07885EA72FF381A100938231 /* JBirdCore in Frameworks */,
+				07885EA92FF381A100938231 /* JBirdMacros in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +228,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07885A0A2FF3806300938231 /* libConvusicKit.a in Frameworks */,
+				07EF00000000000000000001 /* JBird in Frameworks */,
+				07EF00000000000000000002 /* JBirdBuilders in Frameworks */,
+				07EF00000000000000000003 /* JBirdCodableSupport in Frameworks */,
+				07EF00000000000000000004 /* JBirdCore in Frameworks */,
+				07EF00000000000000000005 /* JBirdMacros in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +249,7 @@
 				074265672FF02ED500343560 /* ConvusicDesktopTests */,
 				074265992FF0350C00343560 /* ConvusicKit */,
 				078859B22FF300AB00938231 /* BrowserExtensionMobile */,
+				07885A092FF3806300938231 /* Frameworks */,
 				074264F32FF02B5800343560 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -235,6 +265,13 @@
 				078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		07885A092FF3806300938231 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +298,11 @@
 			name = ConvusicMobile;
 			packageProductDependencies = (
 				074265E52FF1AD9900343560 /* ViewScope */,
+				07885EA02FF381A100938231 /* JBird */,
+				07885EA22FF381A100938231 /* JBirdBuilders */,
+				07885EA42FF381A100938231 /* JBirdCodableSupport */,
+				07885EA62FF381A100938231 /* JBirdCore */,
+				07885EA82FF381A100938231 /* JBirdMacros */,
 			);
 			productName = ConvusicMobile;
 			productReference = 0742652C2FF02DFB00343560 /* ConvusicMobile.app */;
@@ -372,12 +414,18 @@
 			buildRules = (
 			);
 			dependencies = (
+				07885A0C2FF3806300938231 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				078859B22FF300AB00938231 /* BrowserExtensionMobile */,
 			);
 			name = BrowserExtensionMobile;
 			packageProductDependencies = (
+				07EE00000000000000000001 /* JBird */,
+				07EE00000000000000000002 /* JBirdBuilders */,
+				07EE00000000000000000003 /* JBirdCodableSupport */,
+				07EE00000000000000000004 /* JBirdCore */,
+				07EE00000000000000000005 /* JBirdMacros */,
 			);
 			productName = BrowserExtensionMobile;
 			productReference = 078859B12FF300AB00938231 /* BrowserExtensionMobile.appex */;
@@ -391,7 +439,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2650;
-				LastUpgradeCheck = 2650;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					0742652B2FF02DFB00343560 = {
 						CreatedOnToolsVersion = 26.5;
@@ -549,6 +597,11 @@
 			target = 078859B02FF300AB00938231 /* BrowserExtensionMobile */;
 			targetProxy = 078859C72FF300AB00938231 /* PBXContainerItemProxy */;
 		};
+		07885A0C2FF3806300938231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 074265972FF0350C00343560 /* ConvusicKit */;
+			targetProxy = 07885A0B2FF3806300938231 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -586,6 +639,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -609,6 +663,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
@@ -650,6 +705,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -666,6 +722,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT = YES;
 				SWIFT_VERSION = 6.0;
@@ -679,7 +736,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ConvusicMobile/ConvusicMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -688,6 +746,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConvusicMobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Convusic;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -699,7 +758,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
@@ -711,6 +770,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -729,7 +789,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ConvusicMobile/ConvusicMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -738,6 +799,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConvusicMobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Convusic;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -749,7 +811,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
@@ -761,6 +823,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -778,6 +841,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
@@ -805,6 +869,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
@@ -833,7 +898,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -845,8 +911,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -867,7 +933,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -879,8 +946,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -900,6 +967,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
@@ -926,6 +994,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
@@ -952,11 +1021,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -971,11 +1047,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 6.0;
@@ -987,14 +1066,15 @@
 		078859CC2FF300AB00938231 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BrowserExtensionMobile/BrowserExtensionMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrowserExtensionMobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BrowserExtensionMobile;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1007,6 +1087,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic.BrowserExtensionMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1017,7 +1098,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1025,14 +1106,15 @@
 		078859CD2FF300AB00938231 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BrowserExtensionMobile/BrowserExtensionMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 3FJXDZ3HU4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrowserExtensionMobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BrowserExtensionMobile;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1045,6 +1127,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.varunsanthanam.Convusic.BrowserExtensionMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -1055,7 +1138,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1178,6 +1261,56 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 074265E42FF1AD9900343560 /* XCRemoteSwiftPackageReference "ViewScope" */;
 			productName = ViewScope;
+		};
+		07885EA02FF381A100938231 /* JBird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBird;
+		};
+		07885EA22FF381A100938231 /* JBirdBuilders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdBuilders;
+		};
+		07885EA42FF381A100938231 /* JBirdCodableSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdCodableSupport;
+		};
+		07885EA62FF381A100938231 /* JBirdCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdCore;
+		};
+		07885EA82FF381A100938231 /* JBirdMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdMacros;
+		};
+		07EE00000000000000000001 /* JBird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBird;
+		};
+		07EE00000000000000000002 /* JBirdBuilders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdBuilders;
+		};
+		07EE00000000000000000003 /* JBirdCodableSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdCodableSupport;
+		};
+		07EE00000000000000000004 /* JBirdCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdCore;
+		};
+		07EE00000000000000000005 /* JBirdMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 074265892FF02F8500343560 /* XCRemoteSwiftPackageReference "JBird" */;
+			productName = JBirdMacros;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
